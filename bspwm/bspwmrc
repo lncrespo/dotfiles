@@ -24,3 +24,9 @@ xinput --set-prop 8 'libinput Accel Speed' -0.5
 # Compositor (picom)
 picom --config ~/.config/picom/picom.conf -c -b
 
+# Logitech Keyboard LEDs (keyledsd)
+keyledsd
+
+# Cursor
+xsetroot -cursor_name left_ptr &
+
