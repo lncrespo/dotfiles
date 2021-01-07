@@ -25,7 +25,6 @@ foreground = #fff
 foreground-alt = #555
 primary = #bad7ae
 secondary = #e60053
-alert = #bd2c40
 
 [bar/example]
 monitor = ${env:MONITOR:DP-0}
@@ -183,7 +182,7 @@ card = intel_backlight
 
 [module/memory]
 type = internal/memory
-interval = 3
+interval = 0.5
 format = <label> <bar-used>
 label = ﬙
 label-padding = 2
@@ -229,7 +228,7 @@ type = internal/network
 interface = wlp3s0f0u6
 interval = 3.0
 
-format-connected = "     " 
+format-connected = "      " 
 label-connected = %essid%
 
 format-disconnected =
@@ -276,10 +275,8 @@ background = #000
 format-volume = <ramp-volume> <label-volume>
 format-volume-font = 0  
 format-volume-padding = 2
-format-volume-background = #171a1f
 label-volume = %percentage%%
 label-muted = "婢"
-label-muted-background = #171a1f
 label-muted-padding = 2
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -302,16 +299,16 @@ label-close =  cancel
 label-separator = |
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = shutdown
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot now
+menu-1-0 = reboot
+menu-1-0-exec = reboot now
+menu-1-1 = cancel
+menu-1-1-exec = menu-open-0
 
 menu-2-0 = power off
-menu-2-0-exec = sudo shutdown now
+menu-2-0-exec = shutdown now
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
