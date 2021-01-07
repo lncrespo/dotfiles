@@ -7,6 +7,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/edge'
 
 call plug#end()
 
@@ -47,15 +48,19 @@ set laststatus=2
 set ttimeoutlen=50
 set updatetime=300
 set noshowmode
-set guicursor=
+
+" Graphical
+set termguicolors
 
 " Keybindings
 nmap <space>e :CocCommand explorer<CR>
+nmap <space>f :CocFix <CR>
+nmap <space>d :call CocActionAsync('jumpDefinition') <CR>
 
-let g:gruvbox_material_palette = 'mix'
-let g:gruvbox_material_background = 'medium'
-let g:airline_theme = 'gruvbox_material'
+"let g:gruvbox_material_palette = 'mix'
+"let g:gruvbox_material_background = 'medium'
+let g:airline_theme = 'edge'
 let g:airline_powerline_fonts = 1
 
-colorscheme gruvbox-material
+colorscheme edge
 
