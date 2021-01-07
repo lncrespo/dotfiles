@@ -12,7 +12,7 @@ super + d
 
 # lock screen
 super + @space
-    env XSECURELOCK_SAVER=saver_mpv XSECURELOCK_LIST_VIDEOS_COMMAND="find /home/lucas/Pictures/lockscreen/ -type f" XSECURELOCK_IMAGE_DURATION_SECONDS=60 xsecurelock
+    betterlockscreen -l
 
 # make sxhkd reload its configuration files:
 super + Escape
