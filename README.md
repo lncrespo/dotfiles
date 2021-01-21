@@ -6,6 +6,8 @@
 - picom
 - polybar
 - alacritty
+- feh (Wallpaper)
+- betterlockscreen (Lock screen)
 
 ### Useful tools
 - lxappearance (for selecting GTK themes)
