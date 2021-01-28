@@ -4,11 +4,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'tpope/vim-fugitive'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
-Plug 'sainnhe/edge'
 
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Enable syntax
@@ -57,10 +58,9 @@ nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocFix <CR>
 nmap <space>d :call CocActionAsync('jumpDefinition') <CR>
 
-"let g:gruvbox_material_palette = 'mix'
-"let g:gruvbox_material_background = 'medium'
-let g:airline_theme = 'edge'
+let g:gruvbox_material_palette = 'material'
+let g:gruvbox_material_background = 'medium'
 let g:airline_powerline_fonts = 1
 
-colorscheme edge
+colorscheme gruvbox-material
 
