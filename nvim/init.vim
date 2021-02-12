@@ -6,10 +6,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
-Plug 'doums/darcula'
 
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
