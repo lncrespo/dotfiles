@@ -5,9 +5,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
+Plug 'doums/darcula'
 
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -57,6 +59,8 @@ set termguicolors
 nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocFix <CR>
 nmap <space>d :call CocActionAsync('jumpDefinition') <CR>
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_background = 'medium'
