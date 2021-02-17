@@ -7,6 +7,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
+Plug 'nelsyeung/twig.vim'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
@@ -51,6 +52,7 @@ set laststatus=2
 set ttimeoutlen=50
 set updatetime=300
 set noshowmode
+set list
 
 " Graphical
 set termguicolors
