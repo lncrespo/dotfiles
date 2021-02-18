@@ -13,7 +13,7 @@ fi
 cp bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 cp sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 cp alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-cp nvim/init.vim ~/.config/nvim/init.vim
+cp nvim/* ~/.config/nvim/
 cp rofi/config.rasi ~/.config/rofi/config.rasi
 cp polybar/* ~/.config/polybar/
 cp picom/picom.conf ~/.config/picom/picom.conf
