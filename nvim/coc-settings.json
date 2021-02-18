@@ -11,6 +11,7 @@
     ],
     "html.autoClosingTags": true,
     "suggest.disableMenu": true,
+    "suggest.maxCompleteItemCount": 10000,
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\uf194",
