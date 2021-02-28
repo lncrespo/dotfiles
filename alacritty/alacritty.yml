@@ -17,3 +17,5 @@ font:
 
   size: 7
 
+  offset:
+      y: 2
