@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'nelsyeung/twig.vim'
+Plug 'psliwka/vim-smoothie'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
@@ -67,6 +68,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_background = 'medium'
 let g:airline_powerline_fonts = 1
+let g:gruvbox_material_enable_bold = 1
 
 colorscheme gruvbox-material
 
