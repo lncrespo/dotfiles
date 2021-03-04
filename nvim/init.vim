@@ -70,5 +70,7 @@ let g:gruvbox_material_background = 'medium'
 let g:airline_powerline_fonts = 1
 let g:gruvbox_material_enable_bold = 1
 
+let g:airline#extensions#tabline#enabled = 1
+
 colorscheme gruvbox-material
 
