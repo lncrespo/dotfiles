@@ -10,6 +10,10 @@ if [ ! -d "~/.config" ]; then
     mkdir -p ~/.config/picom
 fi
 
+if [ ! -d "/usr/share/images" ]; then
+    sudo mkdir /usr/share/images
+fi
+
 cp bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 cp sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 cp alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -17,3 +21,6 @@ cp nvim/* ~/.config/nvim/
 cp rofi/config.rasi ~/.config/rofi/config.rasi
 cp polybar/* ~/.config/polybar/
 cp picom/picom.conf ~/.config/picom/picom.conf
+cp F33_wallpaper_night.jpg $HOME/Pictures/
+sudo cp F33_wallpaper_dusk.jpg /usr/share/images/
+sudo cp lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
