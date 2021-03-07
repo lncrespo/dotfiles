@@ -12,6 +12,7 @@ Plug 'psliwka/vim-smoothie'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
+Plug 'chriskempson/base16-vim'
 
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -71,6 +72,6 @@ let g:airline_powerline_fonts = 1
 let g:gruvbox_material_enable_bold = 1
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
 
-colorscheme gruvbox-material
-
+colorscheme base16-tomorrow-night
