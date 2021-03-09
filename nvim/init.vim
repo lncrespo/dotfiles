@@ -62,7 +62,12 @@ set termguicolors
 " Keybindings
 nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocFix <CR>
+nmap <space>a :CocAction <CR>
 nmap <space>d :call CocActionAsync('jumpDefinition') <CR>
+nmap <space>re :call CocActionAsync('jumpReferences') <CR>
+nmap <space>rn :call CocActionAsync('rename') <CR>
+nmap <space>cs :call CocActionAsync('format') <CR>
+nmap <space>gd :call CocActionAsync('fold') <CR>
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
