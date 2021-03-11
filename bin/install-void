@@ -1,0 +1,58 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+    echo "This installer must be run as root"
+    exit
+fi
+
+read -p "Enter your username: " username
+
+# Installing basic packages
+xbps-install -Su
+xbps-install curl zip unzip xorg lightdm lightdm-gtk3-greeter bspwm sxhkd alacritty rofi vim neovim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar
+
+# Nerd fonts
+mkdir -p /home/$username/packages/fonts
+curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
+unzip JetBrainsMono.zip -d /home/$username/packages/fonts/jetbrainsmono
+cp /home/$username/packages/fonts/jetbrainsmono/*.ttf /usr/share/fonts/TTF/
+
+# JetBrains Mono
+/bin/bash "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+
+mkdir -p /home/$username/.config/bspwm
+mkdir /home/$username/.config/sxhkd
+mkdir /home/$username/.config/alacritty
+mkdir /home/$username/.config/nvim
+mkdir /home/$username/.config/rofi
+mkdir /home/$username/.config/polybar
+mkdir /home/$username/.config/picom
+mkdir /home/$username/.config/dunst
+
+if [ ! -d "/usr/share/images" ]; then
+    mkdir /usr/share/images
+fi
+
+cp bspwm/bspwmrc /home/$username/.config/bspwm/bspwmrc
+cp sxhkd/sxhkdrc /home/$username/.config/sxhkd/sxhkdrc
+cp alacritty/alacritty.yml /home/$username/.config/alacritty/alacritty.yml
+cp nvim/* /home/$username/.config/nvim/
+cp rofi/config.rasi /home/$username/.config/rofi/config.rasi
+cp polybar/* /home/$username/.config/polybar/
+cp picom/picom.conf /home/$username/.config/picom/picom.conf
+
+cp F33_wallpaper_dusk.jpg /usr/share/images/
+
+cp -R themes/gtk/Yaru-Blue* /home/$username/.themes/
+cp -R themes/gtk/Yaru-Blue* /usr/share/themes/
+
+cp -R themes/icons/Yaru-Blue /home/$username/.local/share/icons/
+cp lightdm/lightdm-gtk-greeter.conf /etc/lightdm/
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+chown $username:$username -R $HOME
+
+ln -s /etc/sv/dbus /var/service/
+ln -s /etc/sv/lightdm /var/service/
