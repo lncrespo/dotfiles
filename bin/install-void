@@ -17,8 +17,9 @@ curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBr
 unzip JetBrainsMono.zip -d /home/$username/packages/fonts/jetbrainsmono
 cp /home/$username/packages/fonts/jetbrainsmono/*.ttf /usr/share/fonts/TTF/
 
+chown $username:$username -R /home/$username
 # JetBrains Mono
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+runuser -l $username -c '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"'
 
 mkdir -p /home/$username/.config/bspwm
 mkdir /home/$username/.config/sxhkd
@@ -55,6 +56,9 @@ mkdir /etc/X11/xorg.conf.d
 cp X11/* /etc/X11/xorg.conf.d/
 
 chown $username:$username -R /home/$username
+
+runuser -l $username -c "sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
 
 ln -s /etc/sv/dbus /var/service/
 ln -s /etc/sv/lightdm /var/service/
