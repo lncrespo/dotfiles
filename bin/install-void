@@ -69,5 +69,5 @@ echo "Inherits=Adwaita" >> /usr/share/icons/default/index.theme
 
 echo 'eval "$(starship init bash)"' >> /home/$username/.bashrc
 
-ln -s /etc/sv/dbus /var/service/
-ln -s /etc/sv/lxdm /var/service/
+ln -s /etc/sv/dbus /var/service
+ln -s /etc/sv/lxdm /var/service
