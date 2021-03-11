@@ -36,10 +36,8 @@ mkdir /home/$username/.config/dunst
 mkdir -p /home/$username/.local/share/icons
 mkdir /home/$username/.themes
 mkdir /home/$username/Pictures
-
-if [ ! -d "/usr/share/images" ]; then
-    mkdir /usr/share/images
-fi
+mkdir /usr/share/images
+mkdir /usr/share/icons/default
 
 cp bspwm/bspwmrc /home/$username/.config/bspwm/bspwmrc
 cp sxhkd/sxhkdrc /home/$username/.config/sxhkd/sxhkdrc
@@ -63,6 +61,8 @@ chown $username:$username -R /home/$username
 
 runuser -l $username -c "sh -c 'curl -fLo "${XDG_DATA_HOME:-/home/$username/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
+
+echo "session=/usr/bin/bspwm" >> /etc/lxdm/lxdm.conf
 
 echo "[icon theme]" > /usr/share/icons/default/index.theme
 echo "Inherits=Adwaita" >> /usr/share/icons/default/index.theme
