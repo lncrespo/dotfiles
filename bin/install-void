@@ -35,6 +35,7 @@ mkdir /home/$username/.config/picom
 mkdir /home/$username/.config/dunst
 mkdir -p /home/$username/.local/share/icons
 mkdir /home/$username/.themes
+mkdir /home/$username/Pictures
 
 if [ ! -d "/usr/share/images" ]; then
     mkdir /usr/share/images
