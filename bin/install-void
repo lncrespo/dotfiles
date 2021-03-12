@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-read -p "Enter your username: " username
+read -p "Enter the name of your current user: " username
 
 # Installing basic packages
 xbps-install -Su
@@ -47,7 +47,8 @@ cp rofi/config.rasi /home/$username/.config/rofi/config.rasi
 cp polybar/* /home/$username/.config/polybar/
 cp picom/picom.conf /home/$username/.config/picom/picom.conf
 
-cp F33_wallpaper_dusk.jpg /usr/share/images/
+cp black_hole.jpg /usr/share/images/
+cp black_hole.jpg /home/$username/Pictures/
 
 cp -R themes/gtk/Yaru-Blue* /home/$username/.themes/
 cp -R themes/gtk/Yaru-Blue* /usr/share/themes/
