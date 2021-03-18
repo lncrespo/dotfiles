@@ -9,7 +9,7 @@ read -p "Enter the name of your current user: " username
 
 # Installing basic packages
 xbps-install -Su
-xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim neovim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf starship noto-fonts-emoji
+xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim neovim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji
 
 # Nerd fonts
 mkdir -p /home/$username/packages/fonts
@@ -58,6 +58,11 @@ cp -R themes/icons/Yaru-Blue /home/$username/.local/share/icons/
 mkdir /etc/X11/xorg.conf.d
 cp X11/* /etc/X11/xorg.conf.d/
 
+cp -R utils /home/$username/
+mv /home/$username/utils /home/$username/.utils
+
+cp bashrc /home/$username/.bashrc
+
 chown $username:$username -R /home/$username
 
 runuser -l $username -c "sh -c 'curl -fLo "${XDG_DATA_HOME:-/home/$username/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -67,8 +72,6 @@ echo "session=/usr/bin/bspwm" >> /etc/lxdm/lxdm.conf
 
 echo "[icon theme]" > /usr/share/icons/default/index.theme
 echo "Inherits=Adwaita" >> /usr/share/icons/default/index.theme
-
-echo 'eval "$(starship init bash)"' >> /home/$username/.bashrc
 
 ln -s /etc/sv/dbus /var/service
 ln -s /etc/sv/lxdm /var/service
