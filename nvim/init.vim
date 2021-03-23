@@ -3,16 +3,17 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'nelsyeung/twig.vim'
 Plug 'psliwka/vim-smoothie'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
-Plug 'chriskempson/base16-vim'
 
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -26,7 +27,6 @@ set relativenumber
 
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
-
 
 " Indentation
 set expandtab
@@ -55,6 +55,11 @@ set ttimeoutlen=50
 set updatetime=300
 set noshowmode
 set list
+set so=3
+set siso=5
+
+" Buffers
+set hidden
 
 " Graphical
 set termguicolors
@@ -76,7 +81,4 @@ let g:gruvbox_material_background = 'medium'
 let g:airline_powerline_fonts = 1
 let g:gruvbox_material_enable_bold = 1
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_splits = 0
-
-colorscheme base16-tomorrow-night
+colorscheme gruvbox-material
