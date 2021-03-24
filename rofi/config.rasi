@@ -1,7 +1,60 @@
 configuration {
     modi: "drun";
-    theme: "gruvbox-dark";
-    font: "JetBrains Mono 10";
+    font: "Inter 11";
     show-icons: true;
     icon-theme: "Tela-dark";
 }
+
+* {
+  background-color: #282C33;
+  border-color: #2e343f;
+  text-color: #8ca0aa;
+  width: 512px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+}
+
+prompt {
+  padding: 16px;
+  border: 0 1px 0 0;
+}
+
+textbox {
+  background-color: #2e343f;
+  border: 0 0 1px 0;
+  border-color: #282C33;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 16px;
+}
+
+listview {
+  cycle: true;
+  dynamic: true;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  layout: vertical;
+}
+
+element {
+  border: 0 0 1px 0;
+  padding: 10px;
+}
+
+element-text {
+    margin: 5px 5px;
+}
+
+element selected {
+  background-color: #2e343f;
+}
+
+element-icon {
+    size: 30px;
+}
+
+/* vim:ft=css
