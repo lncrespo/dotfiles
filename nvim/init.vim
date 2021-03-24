@@ -69,6 +69,7 @@ nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocFix <CR>
 nmap <space>a :CocAction <CR>
 nmap <space>d :call CocActionAsync('jumpDefinition') <CR>
+nmap <space>h :call CocActionAsync('doHover') <CR>
 nmap <space>re :call CocActionAsync('jumpReferences') <CR>
 nmap <space>rn :call CocActionAsync('rename') <CR>
 nmap <space>cs :call CocActionAsync('format') <CR>
