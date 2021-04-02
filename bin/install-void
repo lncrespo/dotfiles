@@ -22,6 +22,7 @@ unzip 'Inter-3.15.zip' -d /home/$username/packages/fonts/inter
 cp -R /home/$username/packages/fonts/inter /usr/share/fonts/
 
 chown $username:$username -R /home/$username
+
 # JetBrains Mono
 runuser -l $username -c '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"'
 
@@ -46,9 +47,10 @@ cp nvim/* /home/$username/.config/nvim/
 cp rofi/config.rasi /home/$username/.config/rofi/config.rasi
 cp polybar/* /home/$username/.config/polybar/
 cp picom/picom.conf /home/$username/.config/picom/picom.conf
+cp dunst/dunstrc /home/$username/.config/dunst/dunstrc
 
-cp black_hole.jpg /usr/share/images/
-cp black_hole.jpg /home/$username/Pictures/
+cp mountains.jpg /usr/share/images/
+cp mountains.jpg /home/$username/Pictures/
 
 cp -R themes/gtk/Yaru-Blue* /home/$username/.themes/
 cp -R themes/gtk/Yaru-Blue* /usr/share/themes/
