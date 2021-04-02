@@ -8,7 +8,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'nelsyeung/twig.vim'
 Plug 'psliwka/vim-smoothie'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -81,5 +80,12 @@ let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_background = 'medium'
 let g:airline_powerline_fonts = 1
 let g:gruvbox_material_enable_bold = 1
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 colorscheme gruvbox-material
