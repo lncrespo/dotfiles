@@ -20,7 +20,7 @@ font-2 = Inter:pixelsize=12;3
 font-3 = JetBrains Mono Nerd Font:pixelsize=21;5
 
 modules-left = bspwm
-modules-right = filesystem volume wlan cpu memory date separator powermenu
+modules-right = filesystem battery volume wlan cpu memory date separator powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -103,7 +103,14 @@ interval = 1
 format-prefix = "%{T4 B#555555 F#454545}%{F- T- B#454545}  "
 label = "%percentage%% "
 
-# TODO: Battery
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 99
+
+label-discharging = "    %percentage%% "
+label-charging = "     %percentage%% "
 
 [module/eth]
 type = internal/network
