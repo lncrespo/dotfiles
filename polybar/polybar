@@ -116,7 +116,7 @@ format-disconnected = "%{T4 B#707070 F#555555}%{F- T- B#555555}   "
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0f0u6
+interface = wlp3s0
 interval = 3.0
 
 format-connected = "%{T4 B#707070 F#555555}%{F- T- B#555555}   "
@@ -129,7 +129,7 @@ background = #000
 format-volume = "%{T4 F#707070}%{F- T- B#707070} <ramp-volume> <label-volume> "
 format-volume-font = 0
 label-volume = %percentage%%
-label-muted = "婢"
+label-muted = "%{T4 F#707070}%{F- T- B#707070} 婢 "
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
 ramp-volume-2 = 奔
