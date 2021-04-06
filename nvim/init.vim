@@ -10,9 +10,11 @@ Plug 'nelsyeung/twig.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'akinsho/nvim-bufferline.lua'
 
 " Themes
 Plug 'sainnhe/gruvbox-material'
+Plug 'joshdick/onedark.vim'
 
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -88,4 +90,5 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-colorscheme gruvbox-material
+" Background color = #1e2126
+colorscheme onedark
