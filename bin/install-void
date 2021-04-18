@@ -9,7 +9,7 @@ read -p "Enter the name of your current user: " username
 
 # Installing basic packages
 xbps-install -Su
-xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim neovim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji
+xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji
 
 # Nerd fonts
 mkdir -p /home/$username/packages/fonts
