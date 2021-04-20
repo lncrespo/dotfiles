@@ -15,6 +15,7 @@ As of now, there is no script to install everything from scratch, so you need to
 - alacritty
 - feh (Wallpaper)
 - betterlockscreen (Lock screen)
+- neovim 0.5
 
 #### Useful tools
 - lxappearance (for selecting GTK themes)
