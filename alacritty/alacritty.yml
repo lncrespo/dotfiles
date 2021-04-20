@@ -1,7 +1,7 @@
 font:
   normal:
     family: JetBrains Mono
-    style: Regular
+    style: Medium
 
   bold:
     family: JetBrains Mono
@@ -15,7 +15,12 @@ font:
     family: JetBrains Mono
     style: Bold Italic
 
-  size: 7
+  size: 10.5
 
   offset:
       y: 2
+
+cursor:
+  style:
+    blinking: Always
+    blink_interval: 500
