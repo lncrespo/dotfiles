@@ -15,6 +15,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/snippets.nvim'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'jiangmiao/auto-pairs'
 
 " Themes
 Plug 'joshdick/onedark.vim'

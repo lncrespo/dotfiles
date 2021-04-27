@@ -1,2 +1,7 @@
 nvim/plugged
 nvim/undodir
+
+*.zip
+*.rar
+*.tar
+*.tar.*

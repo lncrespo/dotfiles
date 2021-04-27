@@ -16,5 +16,4 @@ source $HOME/.config/nvim/modules/plugins/gitsigns.vim
 " LSP
 source $HOME/.config/nvim/modules/lsp/lsp.vim
 
-" Background color = #1e2126
 colorscheme onedark

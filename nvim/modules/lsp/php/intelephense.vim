@@ -17,6 +17,9 @@ require'lspconfig'.intelephense.setup{
                         "\n@package ${1:$SYMBOL_NAMESPACE}"
                     }
                 }
+            },
+            files = {
+                exclude = {}
             }
         }
     }
