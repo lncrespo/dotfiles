@@ -20,7 +20,7 @@ require'lspconfig'.intelephense.setup{
                 functionTemplate = {
                     tags = {
                         "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME",
-                        "@return ${1:$SYMBOL_TYPE}\n",
+                        "@return ${1:$SYMBOL_TYPE}",
                         "@throws ${1:$SYMBOL_TYPE}"
                     }
                 },

@@ -36,3 +36,6 @@ nnoremap <space>fh <cmd>Telescope help_tags<cr>
 " gitsigns
 nnoremap <leader>bt :Gitsigns toggle_current_line_blame <CR>
 nnoremap <leader>bl :Gitsigns blame_line <CR>
+
+" intelephense: one line codeblock to multiline codeblock
+nnoremap <leader>pd 0t@r2f r2x
