@@ -16,9 +16,24 @@ require'lspconfig'.intelephense.setup{
                         "Class ${1:$SYMBOL_NAME}",
                         "\n@package ${1:$SYMBOL_NAMESPACE}"
                     }
+                },
+                functionTemplate = {
+                    tags = {
+                        "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME",
+                        "@return ${1:$SYMBOL_TYPE}\n",
+                        "@throws ${1:$SYMBOL_TYPE}"
+                    }
+                },
+                propertyTemplate = {
+                    tags = {
+                        "@var ${1:$SYMBOL_TYPE}\n"
+                    }
                 }
             },
             files = {
+                exclude = {}
+            },
+            references = {
                 exclude = {}
             }
         }
