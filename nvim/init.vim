@@ -7,7 +7,6 @@ source $HOME/.config/nvim/modules/plugins/lualine.vim
 source $HOME/.config/nvim/modules/plugins/nvim-tree.vim
 source $HOME/.config/nvim/modules/plugins/nvim-bufferline.vim
 source $HOME/.config/nvim/modules/plugins/nvim-treesitter.vim
-source $HOME/.config/nvim/modules/plugins/snippets.vim
 source $HOME/.config/nvim/modules/plugins/completion-nvim.vim
 source $HOME/.config/nvim/modules/plugins/telescope.vim
 source $HOME/.config/nvim/modules/plugins/lightbulb.vim

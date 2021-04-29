@@ -6,5 +6,5 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
 require'lspconfig'.rust_analyzer.setup{
     on_attach=require'completion'.on_attach,
-    capabilites = capabilites;
+    capabilites = capabilites
 }
