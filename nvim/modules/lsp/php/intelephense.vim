@@ -4,7 +4,7 @@ require'lspconfig'.intelephense.setup{
     on_attach=require'completion'.on_attach,
     cmd = { "intelephense", "--stdio" },
     filetypes = { "php" },
-    root_dir = require'lspconfig'.util.root_pattern('composer.json', '.git', 'index.php'),
+    root_dir = require'lspconfig'.util.root_pattern('.git', '.idea', 'index.php'),
     settings = {
         intelephense = {
             completion = {
