@@ -1,5 +1,6 @@
 source $HOME/.config/nvim/modules/general.vim
 source $HOME/.config/nvim/modules/bindings.vim
+source $HOME/.config/nvim/modules/autocommands.vim
 
 " Plugin Configurations
 source $HOME/.config/nvim/modules/plugins/vim-plug.vim
@@ -15,4 +16,4 @@ source $HOME/.config/nvim/modules/plugins/gitsigns.vim
 " LSP
 source $HOME/.config/nvim/modules/lsp/lsp.vim
 
-colorscheme onedark
+source $HOME/.config/nvim/modules/colorscheme.vim
