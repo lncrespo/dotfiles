@@ -1,12 +1,14 @@
 lua << EOF
 
-local custom_onedark = require'lualine.themes.onedark'
+local custom = require'lualine.themes.codedark'
 
-custom_onedark.normal.c.bg = '#1d1f21'
+custom.normal.c.bg = '#1d1f21'
+custom.insert.c.bg = '#1d1f21'
+custom.replace.c.bg = '#1d1f21'
 
 require('lualine').setup{
     options = {
-        theme = custom_onedark,
+        theme = custom,
         sources = {'nvim_lsp'},
         color_error = '#cc0000'
     },
