@@ -18,6 +18,8 @@ Plug 'norcalli/snippets.nvim'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'lumiliet/vim-twig'
+Plug 'qbbr/vim-symfony'
 
 " Themes
 Plug 'joshdick/onedark.vim'
