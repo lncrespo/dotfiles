@@ -8,7 +8,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " LSP
 nnoremap <space>d :lua require'telescope.builtin'.lsp_definitions() <CR>
-nnoremap <space>a :lua require'telescope.builtin'.lsp_code_actions() <CR>
 nnoremap <space>h :lua vim.lsp.buf.hover() <CR>
 nnoremap <space>re :lua require'telescope.builtin'.lsp_references() <CR>
 nnoremap <space>rn :lua vim.lsp.buf.rename() <CR>
@@ -53,3 +52,17 @@ imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+lua << EOF
+function lsp_code_actions()
+  local opts = require'telescope.themes'.get_dropdown {
+    winblend = 10,
+    border = true,
+    previewer = false,
+    shorten_path = false,
+  }
+
+  require'telescope.builtin'.lsp_code_actions(opts)
+end
+
+vim.api.nvim_set_keymap('n', '<space>a', ':lua lsp_code_actions()<CR>', { noremap = true })
