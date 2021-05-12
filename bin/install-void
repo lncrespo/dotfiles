@@ -49,8 +49,8 @@ cp polybar/* /home/$username/.config/polybar/
 cp picom/picom.conf /home/$username/.config/picom/picom.conf
 cp dunst/dunstrc /home/$username/.config/dunst/dunstrc
 
-cp mountains.jpg /usr/share/images/
-cp mountains.jpg /home/$username/Pictures/
+cp foggy_mountains.jpg /usr/share/images/
+cp foggy_mountains.jpg /home/$username/Pictures/
 
 cp -R themes/gtk/Yaru-Blue* /home/$username/.themes/
 cp -R themes/gtk/Yaru-Blue* /usr/share/themes/
