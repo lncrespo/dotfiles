@@ -6,7 +6,10 @@ On a (fresh) Void Linux Install, the `bin/install-void` script can be used to co
 ## Arch Linux
 As of now, there is no script to install everything from scratch, so you need to install the packages manually, followed by running the `bin/install` script.
 
-### Required packages
+## Credits
+[adi1090x](https://github.com/adi1090x) for both his [polybar](https://github.com/adi1090x/polybar-themes) and [rofi](https://github.com/adi1090x/rofi) themes.
+
+## Required packages
 - bspwm
 - sxhkd
 - rofi
