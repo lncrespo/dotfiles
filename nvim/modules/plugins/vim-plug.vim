@@ -17,12 +17,11 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/snippets.nvim'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'jiangmiao/auto-pairs'
+Plug 'steelsojka/pears.nvim'
 Plug 'lumiliet/vim-twig'
 Plug 'qbbr/vim-symfony'
 
 " Themes
 Plug 'joshdick/onedark.vim'
-
-Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/gruvbox-material'
 call plug#end()

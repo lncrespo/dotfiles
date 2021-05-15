@@ -12,6 +12,7 @@ source $HOME/.config/nvim/modules/plugins/completion-nvim.vim
 source $HOME/.config/nvim/modules/plugins/telescope.vim
 source $HOME/.config/nvim/modules/plugins/lightbulb.vim
 source $HOME/.config/nvim/modules/plugins/gitsigns.vim
+source $HOME/.config/nvim/modules/plugins/pears.vim
 
 " LSP
 source $HOME/.config/nvim/modules/lsp/lsp.vim

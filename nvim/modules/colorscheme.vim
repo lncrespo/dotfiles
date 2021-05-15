@@ -5,4 +5,7 @@ let g:onedark_color_overrides = {
 \ "black": {"gui": "#1d1f21", "cterm": "235", "cterm16": "0" }
 \}
 
-colorscheme onedark
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_diagnostic_text_highlight = 1
+
+colorscheme gruvbox-material
