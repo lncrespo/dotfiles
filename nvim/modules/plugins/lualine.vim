@@ -1,10 +1,8 @@
 lua << EOF
 
-local custom = require'lualine.themes.codedark'
+local custom = require'lualine.themes.gruvbox_material'
 
 custom.normal.c.bg = '#1d1f21'
-custom.insert.c.bg = '#1d1f21'
-custom.replace.c.bg = '#1d1f21'
 
 require('lualine').setup{
     options = {
