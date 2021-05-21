@@ -33,11 +33,14 @@ set nowrap
 set laststatus=2
 set ttimeoutlen=50
 set updatetime=300
+set mouse=a
+
+" Visual
 set noshowmode
 set list
 set so=3
 set siso=5
-set mouse=a
+set listchars=trail:·,tab:»-,nbsp:+
 
 " Buffers
 set hidden

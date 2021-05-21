@@ -23,8 +23,9 @@ nnoremap <silent>gb :BufferLineCycleNext<CR>
 nnoremap <silent>gB :BufferLineCyclePrev<CR>
 nnoremap <silent>gc :bw<CR>
 
-" completion nvim
-imap <silent> <c-space> <Plug>(completion_trigger)
+" compe
+imap <silent><expr> <c-space> compe#complete()
+inoremap <silent><expr> <CR> compe#confirm('<CR>')
 
 " telescope
 nnoremap <space>tff <cmd>Telescope find_files<cr>
@@ -54,6 +55,8 @@ smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
+nnoremap <leader>eol <cmd>set listchars=eol:⏎,trail:·,tab:»-,nbsp:+<cr>
+nnoremap <leader>noeol <cmd>set listchars=trail:·,tab:»-,nbsp:+<cr>
 lua << EOF
 function lsp_code_actions()
   local opts = require'telescope.themes'.get_dropdown {

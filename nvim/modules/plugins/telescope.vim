@@ -1,3 +1,4 @@
 lua << EOF
 
-require('telescope').setup{}
+require'telescope'.setup{
+}

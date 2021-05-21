@@ -5,5 +5,5 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.html.setup {
   capabilities = capabilities,
-  on_attach=require'completion'.on_attach
+  filetypes = { 'html', 'twig', 'html.twig', 'html.twig.js.css', 'htmldjango', 'htmldjango.twig', 'handlebars' },
 }

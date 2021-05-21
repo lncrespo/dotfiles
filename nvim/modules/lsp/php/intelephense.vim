@@ -1,8 +1,14 @@
 lua << EOF
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require'lspconfig'.intelephense.setup{
-    on_attach=require'completion'.on_attach,
     cmd = { "intelephense", "--stdio" },
+    on_attach = function(client, bufnr)
+        require'lsp_signature'.on_attach()
+    end,
+    capabilities = capabilities,
     filetypes = { "php" },
     root_dir = require'lspconfig'.util.root_pattern('.git', '.idea', 'composer.lock'),
     settings = {
@@ -13,7 +19,7 @@ require'lspconfig'.intelephense.setup{
             phpdoc = {
                 classTemplate = {
                     tags = {
-                        "Class ${1:$SYMBOL_NAME}",
+                        "Class ${1:$SYMBOL_TYPE}",
                         "\n@package ${1:$SYMBOL_NAMESPACE}"
                     }
                 },
