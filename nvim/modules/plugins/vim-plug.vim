@@ -20,8 +20,12 @@ Plug 'kosayoda/nvim-lightbulb'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'lumiliet/vim-twig'
 Plug 'qbbr/vim-symfony'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'rktjmp/lush.nvim'
 
 " Themes
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'briones-gabriel/darcula-solid.nvim'
+
 call plug#end()

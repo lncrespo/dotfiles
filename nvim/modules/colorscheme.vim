@@ -8,4 +8,5 @@ let g:onedark_color_overrides = {
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_diagnostic_text_highlight = 1
 
-colorscheme gruvbox-material
+set runtimepath+=~/.config/nvim/plugged/custom-darcula.nvim
+colorscheme custom-darcula

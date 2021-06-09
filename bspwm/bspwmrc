@@ -15,7 +15,7 @@ bspc config gapless_monocle      true
 $HOME/.config/polybar/launch_polybar.sh
 
 # Background Image
-feh --bg-fill --no-xinerama ~/Pictures/black_hole.jpg
+feh --bg-fill ~/Pictures/foggy_mountains.jpg
 
 # Mouse Acceleration
 xinput --set-prop 8 'libinput Accel Speed' -0.5

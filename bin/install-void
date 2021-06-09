@@ -9,13 +9,20 @@ read -p "Enter the name of your current user: " username
 
 # Installing basic packages
 xbps-install -Su
-xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji make cmake automake autoconf libtool pkgconf
+xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji gcc make cmake automake autoconf libtool pkgconf gettext tmux bash-completion
 
 # Nerd fonts
 mkdir -p /home/$username/packages/fonts
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip -d /home/$username/packages/fonts/jetbrainsmono
 cp /home/$username/packages/fonts/jetbrainsmono/*.ttf /usr/share/fonts/TTF/
+
+curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip"
+unzip Iosevka.zip -d /home/$username/packages/fonts/iosevka
+cp /home/$username/packages/fonts/iosevka/*.ttf /usr/share/fonts/TTF/
+
+curl -OL "https://github.com/adi1090x/polybar-themes/raw/master/fonts/feather.ttf"
+mv feather.ttf /usr/share/fonts/TTF/
 
 curl -OL 'https://github.com/rsms/inter/releases/download/v3.15/Inter-3.15.zip'
 unzip 'Inter-3.15.zip' -d /home/$username/packages/fonts/inter
@@ -43,11 +50,15 @@ mkdir /usr/share/icons/default
 cp bspwm/bspwmrc /home/$username/.config/bspwm/bspwmrc
 cp sxhkd/sxhkdrc /home/$username/.config/sxhkd/sxhkdrc
 cp alacritty/alacritty.yml /home/$username/.config/alacritty/alacritty.yml
-cp nvim/* /home/$username/.config/nvim/
-cp rofi/config.rasi /home/$username/.config/rofi/config.rasi
-cp polybar/* /home/$username/.config/polybar/
+cp -r nvim/* /home/$username/.config/nvim/
+cp -r rofi /home/$username/.config/
+cp -r polybar/* /home/$username/.config/polybar/
 cp picom/picom.conf /home/$username/.config/picom/picom.conf
 cp dunst/dunstrc /home/$username/.config/dunst/dunstrc
+cp '.tmux.conf' /home/$username/
+
+mkdir /home/$username/.config/nvim/plugged
+mv /home/$username/.config/nvim/custom-darcula.nvim /home/$username/.config/nvim/plugged/
 
 cp foggy_mountains.jpg /usr/share/images/
 cp foggy_mountains.jpg /home/$username/Pictures/
@@ -65,7 +76,7 @@ mv /home/$username/utils /home/$username/.utils
 
 cp bashrc /home/$username/.bashrc
 
-git clone https://github.com/neovim/neovim.git -o nightly /home/$username/packages/
+git clone https://github.com/neovim/neovim.git -o nightly /home/$username/packages/neovim
 
 chown $username:$username -R /home/$username
 
