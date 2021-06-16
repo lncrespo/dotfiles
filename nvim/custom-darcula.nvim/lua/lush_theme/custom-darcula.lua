@@ -83,8 +83,8 @@ VertSplit    { fg=overbg,  bg=bg };    -- column separating vertically split win
 Folded       { fg=comment, bg=overbg };
 FoldColumn   { LineNr };
 
-Pmenu        { bg=overbg };                -- Popup menu normal item
-PmenuSel     { bg=mid };                   -- selected item
+Pmenu        { bg=bg.lighten(15) };                -- Popup menu normal item
+PmenuSel     { bg=blue.darken(40) };                   -- selected item
 PmenuSbar    { Pmenu };                    -- scrollbar
 PmenuThumb   { PmenuSel };                 -- Thumb of the scrollbar
 WildMenu     { Pmenu };                    -- current match in 'wildmenu' completion
