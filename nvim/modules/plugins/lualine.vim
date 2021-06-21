@@ -8,7 +8,9 @@ require('lualine').setup{
     options = {
         theme = custom,
         sources = {'nvim_lsp'},
-        color_error = '#cc0000'
+        color_error = '#cc0000',
+        section_separators = {'', ''},
+        component_separators = {'', ''}
     },
     sections = {
         lualine_c = {'filename', 'diagnostics'}

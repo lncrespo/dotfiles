@@ -277,4 +277,7 @@ markdownLinkText {fg=fg};
 -- NerdTree
 NvimTreeRootFolder { fg=hsl(205, 8, 55) };
 NvimTreeFolderName { fg=hsl(0, 0, 72) };
+NvimTreeOpenedFolderName { fg=hsl(0, 0, 72) };
+NvimTreeNormal { bg=hsl(51, 0, 15) };
+
 }end)
