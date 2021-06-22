@@ -41,6 +41,7 @@ set list
 set so=3
 set siso=5
 set listchars=trail:·,tab:»-,nbsp:+
+set cursorline
 
 " Buffers
 set hidden
