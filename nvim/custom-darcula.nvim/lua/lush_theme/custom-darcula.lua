@@ -115,9 +115,9 @@ WarningMsg   { fg=red };                   -- warning messages
 Directory    { fg=blue };                  -- directory names (and other special names in listings)
 Title        { fg=blue };                  -- titles for output from ":set all" ":autocmd" etc.
 
-DiffAdd      { fg=green.da(20) };
-DiffDelete   { fg=red };
-DiffChange   { fg=yellow.da(20) };
+DiffAdd      { bg=green.da(20), fg=bg };
+DiffDelete   { bg=red, fg=bg };
+DiffChange   { bg=yellow.da(20), fg=bg };
 DiffText     { DiffChange, gui=un };
 DiffAdded    { DiffAdd };
 DiffRemoved  { DiffDelete };
