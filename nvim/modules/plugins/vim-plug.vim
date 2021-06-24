@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Plugins
-Plug 'hoob3rt/lualine.nvim'
+Plug 'glepnir/galaxyline.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/nvim-bufferline.lua'
 Plug 'neovim/nvim-lspconfig'
@@ -20,5 +20,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'rktjmp/lush.nvim'
 Plug 'steelsojka/pears.nvim'
+Plug 'nvim-lua/lsp-status.nvim'
+Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
