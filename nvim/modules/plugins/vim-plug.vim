@@ -15,17 +15,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'norcalli/snippets.nvim'
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'lumiliet/vim-twig'
-Plug 'qbbr/vim-symfony'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'rktjmp/lush.nvim'
-
-" Themes
-Plug 'joshdick/onedark.vim'
-Plug 'sainnhe/gruvbox-material'
-Plug 'briones-gabriel/darcula-solid.nvim'
+Plug 'steelsojka/pears.nvim'
 
 call plug#end()

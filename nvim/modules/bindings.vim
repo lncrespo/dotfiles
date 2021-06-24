@@ -28,11 +28,10 @@ imap <silent><expr> <c-space> compe#complete()
 inoremap <silent><expr> <CR> compe#confirm('<CR>')
 
 " telescope
-nnoremap <space>tff <cmd>Telescope find_files<cr>
-nnoremap <space>tfa <cmd>Telescope find_files find_command=fd,-H,-I <cr>
-nnoremap <space>tg <cmd>Telescope live_grep<cr>
-nnoremap <space>tb <cmd>Telescope buffers<cr>
-nnoremap <space>th <cmd>Telescope help_tags<cr>
+nnoremap <space>j <cmd>Telescope find_files<cr>
+nnoremap <space>h <cmd>Telescope find_files find_command=fd,-H,-I <cr>
+nnoremap <space>g <cmd>Telescope live_grep<cr>
+nnoremap <space>b <cmd>Telescope buffers<cr>
 
 " gitsigns
 nnoremap <leader>bt :Gitsigns toggle_current_line_blame <CR>

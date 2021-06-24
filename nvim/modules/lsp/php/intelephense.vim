@@ -10,7 +10,7 @@ require'lspconfig'.intelephense.setup{
     end,
     capabilities = capabilities,
     filetypes = { "php" },
-    root_dir = require'lspconfig'.util.root_pattern('.git', '.idea', 'composer.lock'),
+    root_dir = require'lspconfig'.util.root_pattern('.idea', 'composer.lock'),
     settings = {
         intelephense = {
             completion = {
@@ -27,7 +27,7 @@ require'lspconfig'.intelephense.setup{
                     tags = {
                         "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME",
                         "@return ${1:$SYMBOL_TYPE}",
-                        "@throws ${1:$SYMBOL_TYPE}"
+                        "@throws ${1:$SYMBOL_NAME}"
                     }
                 },
                 propertyTemplate = {

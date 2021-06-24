@@ -1,4 +1,4 @@
-set completeopt=menuone,noselect
+set completeopt=menuone,noselect,noinsert
 set iskeyword=@,48-57,_,192-255,$
 
 lua << EOF
