@@ -57,9 +57,6 @@ cp picom/picom.conf /home/$username/.config/picom/picom.conf
 cp dunst/dunstrc /home/$username/.config/dunst/dunstrc
 cp '.tmux.conf' /home/$username/
 
-mkdir /home/$username/.config/nvim/plugged
-mv /home/$username/.config/nvim/custom-darcula.nvim /home/$username/.config/nvim/plugged/
-
 cp foggy_mountains.jpg /usr/share/images/
 cp foggy_mountains.jpg /home/$username/Pictures/
 
@@ -78,10 +75,12 @@ cp bashrc /home/$username/.bashrc
 
 git clone https://github.com/neovim/neovim.git -o nightly /home/$username/packages/neovim
 
+mkdir -p "/home/$username/.local/share/nvim/site/pack/packer/start"
+
 chown $username:$username -R /home/$username
 
-runuser -l $username -c "sh -c 'curl -fLo "${XDG_DATA_HOME:-/home/$username/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
+runuser -l $username -c "git clone https://github.com/wbthomason/packer.nvim\
+ /home/$username/.local/share/nvim/site/pack/packer/start/packer.nvim"
 
 echo "session=/usr/bin/bspwm" >> /etc/lxdm/lxdm.conf
 
