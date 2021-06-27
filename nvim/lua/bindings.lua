@@ -19,7 +19,7 @@ vim.api.nvim_set_keymap('n', '<C-H>', '<C-W><C-H>', { noremap = true });
 
 -- LSP
 vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>lua require\'telescope.builtin\'.lsp_definitions()<cr>', { noremap = true });
-vim.api.nvim_set_keymap('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<cr>', { noremap = true });
+vim.api.nvim_set_keymap('n', '<leader>lh', '<cmd>lua vim.lsp.buf.hover()<cr>', { noremap = true });
 vim.api.nvim_set_keymap('n', '<leader>re', '<cmd>lua require\'telescope.builtin\'.lsp_references()<cr>', { noremap = true });
 vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', { noremap = true });
 vim.api.nvim_set_keymap('n', '<leader>cs', '<cmd>lua vim.lsp.buf.formatting()<cr>', { noremap = true });
