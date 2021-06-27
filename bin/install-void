@@ -60,14 +60,6 @@ cp '.tmux.conf' /home/$username/
 cp foggy_mountains.jpg /usr/share/images/
 cp foggy_mountains.jpg /home/$username/Pictures/
 
-# Download the GTK Theme from the mirror
-curl -OL "https://dllb.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MTk5NDEzODAiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImRiNDExNWYxNDMwZGE5ZTg1OWZhYTQ2ZTUyZDE3Nzc0NWY5OTJmOTkzYzk4YjI2MDYwNTQ4MmJlMDQ0MTlhNTQ3Y2RiYTQyNDk1YzE4MmMyMGRjYmNlZGY2NjMyM2QzM2JhMTEzMmVlNjk5NzhjYThjOTk4MmFmODEwMjRmN2EwIiwidCI6MTYyNDc0MzU0Mywic3RmcCI6bnVsbCwic3RpcCI6bnVsbH0.a6nRG3ILYdVY_XPahSMD6Dk01TGd6qzEzfDXhYv3BH4/Yaru-Blue-v21.04.tar.xz"
-mkdir Yaru
-tar -xf "Yaru-Blue-v21.04.tar.xz" --directory=Yaru
-
-cp -r Yaru/Theme/* /usr/share/themes/
-cp -r Yaru/Icons/* /home/$username/.local/share/icons/
-
 mkdir /etc/X11/xorg.conf.d
 cp X11/* /etc/X11/xorg.conf.d/
 
