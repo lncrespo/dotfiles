@@ -201,24 +201,6 @@ gls.right[6] = {
     }
 }
 
-gls.right[7] = {
-    GitIcon = {
-        provider = function()
-            return "   "
-        end,
-        condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey_fg2, colors.lightbg}
-    }
-}
-
-gls.right[8] = {
-    GitBranch = {
-        provider = "GitBranch",
-        condition = require("galaxyline.provider_vcs").check_git_workspace,
-        highlight = {colors.grey_fg2, colors.lightbg}
-    }
-}
-
 gls.right[9] = {
     viMode_icon = {
         provider = function()
