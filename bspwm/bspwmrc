@@ -27,3 +27,5 @@ picom --config ~/.config/picom/picom.conf -c -b
 xsetroot -cursor_name left_ptr &
 
 xset -b
+
+xset r rate 190 25

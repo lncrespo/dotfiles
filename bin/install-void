@@ -9,7 +9,7 @@ read -p "Enter the name of your current user: " username
 
 # Installing basic packages
 xbps-install -Su
-xbps-install curl zip unzip xorg lxdm bspwm sxhkd alacritty rofi vim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji gcc make cmake automake autoconf libtool pkgconf gettext tmux bash-completion xz
+xbps-install curl zip unzip xorg lxdm bspwm sxhkd kitty rofi vim polybar picom feh betterlockscreen lxappearance nodejs firefox dunst Thunar xsel fonts-roboto-ttf noto-fonts-emoji gcc make cmake automake autoconf libtool pkgconf gettext tmux bash-completion xz
 
 # Nerd fonts
 mkdir -p /home/$username/packages/fonts
@@ -35,7 +35,7 @@ runuser -l $username -c '/bin/bash -c "$(curl -fsSL https://raw.githubuserconten
 
 mkdir -p /home/$username/.config/bspwm
 mkdir /home/$username/.config/sxhkd
-mkdir /home/$username/.config/alacritty
+mkdir /home/$username/.config/kitty
 mkdir /home/$username/.config/nvim
 mkdir /home/$username/.config/rofi
 mkdir /home/$username/.config/polybar
@@ -49,7 +49,7 @@ mkdir /usr/share/icons/default
 
 cp bspwm/bspwmrc /home/$username/.config/bspwm/bspwmrc
 cp sxhkd/sxhkdrc /home/$username/.config/sxhkd/sxhkdrc
-cp alacritty/alacritty.yml /home/$username/.config/alacritty/alacritty.yml
+cp 'kitty/kitty.conf' /home/$username/.config/kitty/kitty.conf
 cp -r nvim/* /home/$username/.config/nvim/
 cp -r rofi /home/$username/.config/
 cp -r polybar/* /home/$username/.config/polybar/
